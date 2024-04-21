@@ -1,5 +1,5 @@
-// CS4760-001SS - Terry Ford Jr. - Project 5 Resource Management - 03/29/2024
-// https://github.com/tfordjr/resource-management.git
+// CS4760-001SS - Terry Ford Jr. - Project 6 Memory Management - 04/21/2024
+// https://github.com/tfordjr/memory-management.git
 
 #ifndef RESOURCES_H
 #define RESOURCES_H
