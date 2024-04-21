@@ -1,5 +1,5 @@
 // CS4760-001SS - Terry Ford Jr. - Project 5 Resource Management - 03/29/2024
-// https://github.com/tfordjr/resource-management.git
+// https://github.com/tfordjr/resource-management.git 
 
 #include <unistd.h>
 #include <stdio.h>
