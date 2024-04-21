@@ -1,5 +1,5 @@
-// CS4760-001SS - Terry Ford Jr. - Project 5 Resource Management - 03/29/2024
-// https://github.com/tfordjr/resource-management.git
+// CS4760-001SS - Terry Ford Jr. - Project 6 Memory Management - 04/21/2024
+// https://github.com/tfordjr/memory-management.git
 
 This 5th version of the OSS project now implements simulated system resources that
 child processes must share. These children must share resources and will avoid deadlocks
@@ -15,6 +15,7 @@ Args default to appropriate figures if not provided, can be in any order.
 ---Features: 
 oss.cpp: processes args and managles child forking, msgq, pcb, logical clock, etc.
 user.cpp: user executable takes one arg for number of iterations. prints and sleeps. 
+memory.h holds 2nd chance algorithm and related functions
 pcb.h: contains pcb struct and many related functions for process table utility.
 clock.h: logical clock struct, include add_time() and subtract_time()
 msgq.h: houses msgbuffer struct, running states
@@ -27,11 +28,3 @@ readme: explains project
 ---Lack of adhearance to specifications:
 
 ---Known Problems or Bugs: 
-Deadlock_detection kills procs indescriminately, want to do it better
-The outcome of this is that we do successfully detangle deadlocks consitently!
-The downside is that we often turn around and create another deadlock and another deadlock...
-We need to terminate the oldest, greedies programs to prevent us from terminating a huge
-percentage of total programs over time. I would be content terminating just the biggest 
-greediest programs and allow majority of processes to run and terminate successfully.
-
-I've decided to terminate processes with greater resources taken up to reduce the number of average terminations required to solved a deadlock. This strategy also promotes fairness, as processes with more resources in our particular application are older and have presumably had more CPU time, so terminating those old greedy programs that are causing deadlocks gives space for younger, smaller programs to get CPU time.
